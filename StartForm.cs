@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace LibraryManagementSystem {
     public partial class StartForm : Form {
-        string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\repos\noteTaker\NotesApp.accdb; Jet OLEDB:Database Password=libraryApp22!";
+        string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\repos\LibraryManagementSystem\LibraryManagementDatabase.accdb; Jet OLEDB:Database Password=libraryApp22!";
         public StartForm() {
             InitializeComponent();
         }
@@ -43,7 +43,7 @@ namespace LibraryManagementSystem {
             }
             else {
                 OleDbConnection conn = new OleDbConnection(connectionString);
-                string query = "select * from Users where username like @username and password = @password;";
+                string query = "SELECT * from Librarians WHERE Username LIKE @username and password=@password;";
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 cmd.Parameters.AddWithValue("@username", UsernameInput.Text);
                 cmd.Parameters.AddWithValue("@password", PasswordInput.Text);
