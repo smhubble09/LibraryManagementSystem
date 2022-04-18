@@ -37,7 +37,7 @@
             this.LibrarianButton.Location = new System.Drawing.Point(11, 80);
             this.LibrarianButton.Name = "LibrarianButton";
             this.LibrarianButton.Size = new System.Drawing.Size(142, 35);
-            this.LibrarianButton.TabIndex = 0;
+            this.LibrarianButton.TabIndex = 3;
             this.LibrarianButton.Text = "Librarian Login";
             this.LibrarianButton.UseVisualStyleBackColor = true;
             this.LibrarianButton.Click += new System.EventHandler(this.LibrarianButton_Click);
@@ -47,7 +47,7 @@
             this.UserButton.Location = new System.Drawing.Point(159, 80);
             this.UserButton.Name = "UserButton";
             this.UserButton.Size = new System.Drawing.Size(142, 35);
-            this.UserButton.TabIndex = 1;
+            this.UserButton.TabIndex = 4;
             this.UserButton.Text = "User Login";
             this.UserButton.UseVisualStyleBackColor = true;
             this.UserButton.Click += new System.EventHandler(this.UserButton_Click);
@@ -57,7 +57,7 @@
             this.ExitButton.Location = new System.Drawing.Point(307, 80);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(142, 35);
-            this.ExitButton.TabIndex = 2;
+            this.ExitButton.TabIndex = 5;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
@@ -67,14 +67,14 @@
             this.UsernameInput.Location = new System.Drawing.Point(131, 12);
             this.UsernameInput.Name = "UsernameInput";
             this.UsernameInput.Size = new System.Drawing.Size(217, 20);
-            this.UsernameInput.TabIndex = 3;
+            this.UsernameInput.TabIndex = 1;
             // 
             // PasswordInput
             // 
             this.PasswordInput.Location = new System.Drawing.Point(131, 41);
             this.PasswordInput.Name = "PasswordInput";
             this.PasswordInput.Size = new System.Drawing.Size(217, 20);
-            this.PasswordInput.TabIndex = 4;
+            this.PasswordInput.TabIndex = 2;
             this.PasswordInput.UseSystemPasswordChar = true;
             // 
             // label1

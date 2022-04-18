@@ -12,6 +12,7 @@ namespace LibraryManagementSystem {
     public partial class LibrarianForm : Form {
         public LibrarianForm() {
             InitializeComponent();
+            this.Text = StartForm.LoggedUserName;
         }
     }
 }
