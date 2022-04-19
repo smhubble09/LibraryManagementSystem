@@ -24,96 +24,58 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TitleSearchBox = new System.Windows.Forms.TextBox();
-            this.SearchButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.AuthorComboBox = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.BooksDataGrid = new System.Windows.Forms.DataGridView();
+            this.GuestBookDataGrid = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkOutDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.returnDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iSBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkedOutByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.availableDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.libraryManagementDatabaseDataSet = new LibraryManagementSystem.LibraryManagementDatabaseDataSet();
-            this.CheckOutButton = new System.Windows.Forms.Button();
-            this.ExitButton = new System.Windows.Forms.Button();
             this.booksTableAdapter = new LibraryManagementSystem.LibraryManagementDatabaseDataSetTableAdapters.BooksTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.BooksDataGrid)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LogOutButton = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.GuestBookDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryManagementDatabaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // GuestBookDataGrid
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Title";
-            // 
-            // TitleSearchBox
-            // 
-            this.TitleSearchBox.Location = new System.Drawing.Point(53, 74);
-            this.TitleSearchBox.Name = "TitleSearchBox";
-            this.TitleSearchBox.Size = new System.Drawing.Size(393, 20);
-            this.TitleSearchBox.TabIndex = 1;
-            this.TitleSearchBox.TextChanged += new System.EventHandler(this.TitleSearchBox_TextChanged);
-            // 
-            // SearchButton
-            // 
-            this.SearchButton.Location = new System.Drawing.Point(713, 74);
-            this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(75, 23);
-            this.SearchButton.TabIndex = 3;
-            this.SearchButton.Text = "View All";
-            this.SearchButton.UseVisualStyleBackColor = true;
-            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(321, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Search for books by the Title. Use the dropdown to filter by Author.";
-            // 
-            // AuthorComboBox
-            // 
-            this.AuthorComboBox.FormattingEnabled = true;
-            this.AuthorComboBox.Location = new System.Drawing.Point(503, 74);
-            this.AuthorComboBox.Name = "AuthorComboBox";
-            this.AuthorComboBox.Size = new System.Drawing.Size(204, 21);
-            this.AuthorComboBox.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(462, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Author";
-            // 
-            // BooksDataGrid
-            // 
-            this.BooksDataGrid.AllowUserToAddRows = false;
-            this.BooksDataGrid.AllowUserToDeleteRows = false;
-            this.BooksDataGrid.AllowUserToResizeColumns = false;
-            this.BooksDataGrid.AllowUserToResizeRows = false;
-            this.BooksDataGrid.AutoGenerateColumns = false;
-            this.BooksDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BooksDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GuestBookDataGrid.AllowUserToAddRows = false;
+            this.GuestBookDataGrid.AllowUserToDeleteRows = false;
+            this.GuestBookDataGrid.AllowUserToResizeColumns = false;
+            this.GuestBookDataGrid.AllowUserToResizeRows = false;
+            this.GuestBookDataGrid.AutoGenerateColumns = false;
+            this.GuestBookDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GuestBookDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
             this.bookTitleDataGridViewTextBoxColumn,
-            this.authorDataGridViewTextBoxColumn});
-            this.BooksDataGrid.DataSource = this.booksBindingSource;
-            this.BooksDataGrid.Location = new System.Drawing.Point(12, 101);
-            this.BooksDataGrid.Name = "BooksDataGrid";
-            this.BooksDataGrid.ReadOnly = true;
-            this.BooksDataGrid.RowHeadersVisible = false;
-            this.BooksDataGrid.Size = new System.Drawing.Size(776, 297);
-            this.BooksDataGrid.TabIndex = 4;
+            this.checkOutDateDataGridViewTextBoxColumn,
+            this.returnDateDataGridViewTextBoxColumn,
+            this.iSBNDataGridViewTextBoxColumn,
+            this.checkedOutByDataGridViewTextBoxColumn,
+            this.authorDataGridViewTextBoxColumn,
+            this.availableDataGridViewCheckBoxColumn});
+            this.GuestBookDataGrid.DataSource = this.booksBindingSource;
+            this.GuestBookDataGrid.Location = new System.Drawing.Point(12, 41);
+            this.GuestBookDataGrid.Name = "GuestBookDataGrid";
+            this.GuestBookDataGrid.ReadOnly = true;
+            this.GuestBookDataGrid.RowHeadersVisible = false;
+            this.GuestBookDataGrid.Size = new System.Drawing.Size(533, 150);
+            this.GuestBookDataGrid.TabIndex = 0;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Visible = false;
             // 
             // bookTitleDataGridViewTextBoxColumn
             // 
@@ -122,12 +84,51 @@
             this.bookTitleDataGridViewTextBoxColumn.Name = "bookTitleDataGridViewTextBoxColumn";
             this.bookTitleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // checkOutDateDataGridViewTextBoxColumn
+            // 
+            this.checkOutDateDataGridViewTextBoxColumn.DataPropertyName = "Check Out Date";
+            this.checkOutDateDataGridViewTextBoxColumn.HeaderText = "Check Out Date";
+            this.checkOutDateDataGridViewTextBoxColumn.Name = "checkOutDateDataGridViewTextBoxColumn";
+            this.checkOutDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // returnDateDataGridViewTextBoxColumn
+            // 
+            this.returnDateDataGridViewTextBoxColumn.DataPropertyName = "Return Date";
+            this.returnDateDataGridViewTextBoxColumn.HeaderText = "Return Date";
+            this.returnDateDataGridViewTextBoxColumn.Name = "returnDateDataGridViewTextBoxColumn";
+            this.returnDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iSBNDataGridViewTextBoxColumn
+            // 
+            this.iSBNDataGridViewTextBoxColumn.DataPropertyName = "ISBN";
+            this.iSBNDataGridViewTextBoxColumn.HeaderText = "ISBN";
+            this.iSBNDataGridViewTextBoxColumn.Name = "iSBNDataGridViewTextBoxColumn";
+            this.iSBNDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iSBNDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // checkedOutByDataGridViewTextBoxColumn
+            // 
+            this.checkedOutByDataGridViewTextBoxColumn.DataPropertyName = "Checked Out By";
+            this.checkedOutByDataGridViewTextBoxColumn.HeaderText = "Checked Out By";
+            this.checkedOutByDataGridViewTextBoxColumn.Name = "checkedOutByDataGridViewTextBoxColumn";
+            this.checkedOutByDataGridViewTextBoxColumn.ReadOnly = true;
+            this.checkedOutByDataGridViewTextBoxColumn.Visible = false;
+            // 
             // authorDataGridViewTextBoxColumn
             // 
             this.authorDataGridViewTextBoxColumn.DataPropertyName = "Author";
             this.authorDataGridViewTextBoxColumn.HeaderText = "Author";
             this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
             this.authorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.authorDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // availableDataGridViewCheckBoxColumn
+            // 
+            this.availableDataGridViewCheckBoxColumn.DataPropertyName = "Available";
+            this.availableDataGridViewCheckBoxColumn.HeaderText = "Available";
+            this.availableDataGridViewCheckBoxColumn.Name = "availableDataGridViewCheckBoxColumn";
+            this.availableDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.availableDataGridViewCheckBoxColumn.Visible = false;
             // 
             // booksBindingSource
             // 
@@ -139,46 +140,54 @@
             this.libraryManagementDatabaseDataSet.DataSetName = "LibraryManagementDatabaseDataSet";
             this.libraryManagementDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // CheckOutButton
-            // 
-            this.CheckOutButton.Location = new System.Drawing.Point(53, 415);
-            this.CheckOutButton.Name = "CheckOutButton";
-            this.CheckOutButton.Size = new System.Drawing.Size(75, 23);
-            this.CheckOutButton.TabIndex = 7;
-            this.CheckOutButton.Text = "Check Out";
-            this.CheckOutButton.UseVisualStyleBackColor = true;
-            // 
-            // ExitButton
-            // 
-            this.ExitButton.Location = new System.Drawing.Point(713, 415);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(75, 23);
-            this.ExitButton.TabIndex = 8;
-            this.ExitButton.Text = "Exit";
-            this.ExitButton.UseVisualStyleBackColor = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
             // booksTableAdapter
             // 
             this.booksTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(278, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Books Currently Checked Out:";
+            // 
+            // LogOutButton
+            // 
+            this.LogOutButton.Location = new System.Drawing.Point(12, 197);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Size = new System.Drawing.Size(75, 23);
+            this.LogOutButton.TabIndex = 2;
+            this.LogOutButton.Text = "Log Out";
+            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.Location = new System.Drawing.Point(470, 197);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(75, 23);
+            this.ExitButton.TabIndex = 3;
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(555, 227);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.CheckOutButton);
-            this.Controls.Add(this.BooksDataGrid);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.AuthorComboBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.SearchButton);
-            this.Controls.Add(this.TitleSearchBox);
+            this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.GuestBookDataGrid);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UserForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.UserForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.BooksDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GuestBookDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryManagementDatabaseDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -188,19 +197,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TitleSearchBox;
-        private System.Windows.Forms.Button SearchButton;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox AuthorComboBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView BooksDataGrid;
-        private System.Windows.Forms.Button CheckOutButton;
-        private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.DataGridView GuestBookDataGrid;
         private LibraryManagementDatabaseDataSet libraryManagementDatabaseDataSet;
         private System.Windows.Forms.BindingSource booksBindingSource;
         private LibraryManagementDatabaseDataSetTableAdapters.BooksTableAdapter booksTableAdapter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookTitleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn checkOutDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn returnDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iSBNDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn checkedOutByDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn availableDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Button LogOutButton;
+        private System.Windows.Forms.Button ExitButton;
     }
 }
